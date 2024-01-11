@@ -1,0 +1,102 @@
+.dashboard{
+  margin-top: 24px;
+}
+.dashboard h1{
+    margin: 0px;
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+.dashboardWidgets {
+    margin-top: 20px;
+  }
+  
+  .dashboardWidgets ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .dashboardWidgets li {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(38, 38, 38);
+    border: 1px solid rgb(230, 235, 241);
+    border-radius: 4px;
+    box-shadow: 0 2px 5px 1px rgba(64,60,67,.16);
+  }
+  
+  .widgetTitle {
+    margin: 0px;
+    width: 100%; 
+    font-size: 18px;
+    font-weight: 400;
+    color: rgb(140, 140, 140);
+  }
+  
+  .widgetValue {
+    width: 100%; 
+    font-size: 16px;
+    color: #000;
+  }
+
+  .chartContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    gap: 50px;
+    margin-top: 50px;
+  }
+  .barChart{
+    width: 600px;
+    height: 300px;
+  }
+  .pieChart{
+    width: 300px;
+    height: 300px;
+  }
+
+  @media (max-width: 1024px) {
+    .chartContainer{
+      flex-direction: column;
+      width: 400px;
+      height: 300px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .chartContainer{
+      flex-direction: column;
+      width: 500px;
+      height: 300px;
+    }
+    .dashboardWidgets ul {
+      flex-direction: column; 
+      align-items: center; 
+    }
+  
+    .dashboardWidgets li {
+      width: 30%;
+      margin: 10px; 
+    }
+  }
+  
+  @media (max-width: 445px) {
+    .chartContainer{
+      flex-direction: column;
+      width: 300px;
+      height: 200px;
+    }
+    .dashboardWidgets li {
+      width: 50%;
+    }
+  }

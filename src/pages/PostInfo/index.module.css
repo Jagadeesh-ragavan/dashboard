@@ -1,0 +1,41 @@
+.postInfo{
+  background-color: rgb(255, 255, 255);
+  color: rgb(38, 38, 38);
+  border: 1px solid rgb(230, 235, 241);
+  border-radius: 4px;
+  box-shadow: 0 2px 5px 1px rgba(64,60,67,.16);
+  padding: 20px 30px;
+}
+.postInfo h2{
+  margin-bottom: 20px;
+}
+.postInfo h4{
+  margin-bottom: 15px;
+}
+.postBody textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .button{
+    display: flex;
+    gap: 15px;
+
+  }
+  .editBtn, .saveBtn{
+    margin-top: 15px;
+    border-color: #000;
+    background-color: #FFFFFF;
+    color: #000;
+    border-radius: 8px;
+    padding: 8px 20px;
+    font-size: 14px;
+    min-width: 80px;
+    line-height: 18px;
+  }

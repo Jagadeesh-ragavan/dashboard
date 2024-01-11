@@ -1,0 +1,47 @@
+.userContainer {
+  margin: 24px;
+}
+
+.userCardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.userCard {
+  padding: 16px;
+  margin: 8px;
+  width: calc(33.33% - 16px);
+  box-sizing: border-box; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  color: rgb(38, 38, 38);
+  border: 1px solid rgb(230, 235, 241);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px 1px rgba(64,60,67,.16);
+}
+.userCard h3{
+  margin-top: 10px;
+  padding-bottom: 10px;
+}
+.userCard p {
+  margin: 4px 0;
+}
+
+.userCard a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+@media (max-width: 768px) {
+  .userCard{
+    width: 45%;
+  }
+}
+@media (max-width: 480px) {
+  .userCard{
+    width: 95%;
+  }
+}

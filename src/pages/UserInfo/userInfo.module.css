@@ -1,0 +1,31 @@
+.userInfoContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    color: rgb(38, 38, 38);
+    border: 1px solid rgb(230, 235, 241);
+    border-radius: 4px;
+    padding: 20px;
+    margin-top: 24px;
+  }
+  .userInfoContainer h2{
+    padding-bottom: 15px;
+  }
+  .detail {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  
+  .detail p:first-child {
+    flex-basis: 25%;
+    flex-grow: 0;
+    max-width: 30%;
+    margin-bottom: 10px;
+  }
+  
+  .detail p:last-child {
+    flex-basis: 75%;
+    flex-grow: 0;
+    max-width: 75%;
+    margin-bottom: 10px;
+  }
