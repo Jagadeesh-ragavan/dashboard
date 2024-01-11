@@ -29,10 +29,22 @@
 .userCard p {
   margin: 4px 0;
 }
+.userCardContainer button{
+  margin-top: 15px;
+  border-color: #000;
+  background-color: #FFFFFF;
+  color: #000;
+  border-radius: 8px;
+  padding: 8px 20px;
+  font-size: 14px;
+  line-height: 18px;
+  width: 50%;
+  border: 1px solid;
+}
 
 .userCard a {
   text-decoration: none;
-  color: #007bff;
+  color: #000;
 }
 
 @media (max-width: 768px) {

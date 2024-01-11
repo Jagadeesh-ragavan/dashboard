@@ -60,7 +60,7 @@ const Posts = ({ userId }) => {
                     className={styles.deleteButton}
                     onClick={() => handleDelete(post.id)}
                   >
-                    Delete
+                    <img src='/images/delete.svg' alt="delete" />
                   </button>
                 </td>
               </tr>

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { getData } from '../../services/api';
 import styles from './index.module.css';
-import LoadingSpinner from '../LoadingSpinner';
+import LoadingSpinner from '../../components/LoadingSpinner';
 
 const Users = () => {
   const [allUsers, setAllUsers] = useState([]);
@@ -53,7 +53,9 @@ const Users = () => {
               <p>
                 <strong>Business:</strong> {user.company.bs}
               </p>
-              <Link to={`/user/${user.id}`}>View Details</Link>
+              <button>
+                <Link to={`/user/${user.id}`}>View Details</Link>
+              </button>
             </div>
           ))}
         </div>

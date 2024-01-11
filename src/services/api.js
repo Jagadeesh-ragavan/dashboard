@@ -14,12 +14,11 @@ export const getData = async ( endpoint ) => {
 }
 
 export const deletePost = async (postId) => {
+  const url = `${BASE_URL}/posts/${postId}`;
   try {
-    const response = await fetch(`${BASE_URL}/posts/${postId}`, {
-      method: 'DELETE',
-    });
+    const response = await axios.delete(url);
 
-    if (!response.ok) {
+    if (response.status !== 200) {
       throw new Error('Failed to delete post');
     }
 

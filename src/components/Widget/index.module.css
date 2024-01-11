@@ -37,7 +37,7 @@
     margin: 0px;
     width: 100%; 
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 500;
     color: rgb(140, 140, 140);
   }
   
@@ -65,18 +65,18 @@
     height: 300px;
   }
 
-  @media (max-width: 1024px) {
-    .chartContainer{
-      flex-direction: column;
-      width: 400px;
-      height: 300px;
-    }
-  }
-
   @media (max-width: 768px) {
     .chartContainer{
       flex-direction: column;
       width: 500px;
+      height: 300px;
+    }
+    .barChart{
+      width: 500px;
+      height: 250px;
+    }
+    .pieChart{
+      width: 300px;
       height: 300px;
     }
     .dashboardWidgets ul {
@@ -94,6 +94,14 @@
     .chartContainer{
       flex-direction: column;
       width: 300px;
+      height: 200px;
+    }
+    .barChart{
+      width: 400px;
+      height: 200px;
+    }
+    .pieChart{
+      width: 200px;
       height: 200px;
     }
     .dashboardWidgets li {
