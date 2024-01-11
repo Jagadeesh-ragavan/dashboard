@@ -53,7 +53,15 @@ const PostInfo = () => {
         <LoadingSpinner />
       ) : (
         <>
-          <h4>{post.title}</h4>
+          <div className={styles.postTitle}>
+            <h4>{post.title}</h4>
+            {!isEditing && 
+            <span onClick={handleEditToggle}>
+              <img src='/images/edit.svg' alt="edit" />
+            </span>
+            }
+
+          </div>
 
           {isEditing ? (
             <div className={styles.postBody}>
@@ -62,12 +70,10 @@ const PostInfo = () => {
           ) : (
             <p>{post.body}</p>
           )}
-          <div className={styles.button}>
-            <button onClick={handleEditToggle} className={styles.editBtn}>
-                {isEditing ? 'Cancel' : 'Edit'}
-            </button>
-            {isEditing && <button onClick={handleSaveBody} className={styles.saveBtn}>Save</button>}
-          </div>
+          {isEditing &&<div className={styles.button}>
+            <button onClick={handleEditToggle} className={styles.editBtn}>Cancel</button>
+            <button onClick={handleSaveBody} className={styles.saveBtn}>Save</button>
+          </div>}
         </> 
       )}
 

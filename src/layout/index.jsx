@@ -13,8 +13,8 @@ export default function RootLayout() {
     <div className={styles.rootLayout}>
       <header>
         <div className={styles.profileLinks}>
-          <span to="/logout">
-            <img src='/images/logout.svg' alt="logout" /> Logout
+          <span>
+            <img src='/images/profile.svg' alt="profile" /> Hi Jaga
           </span>
         </div>
       </header>

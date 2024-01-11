@@ -13,6 +13,8 @@
     border: 1px solid #ddd;
     padding: 5px;
     text-align: left;
+    background-color: #fff;
+
   }
   
   .postInfo th {
@@ -43,23 +45,14 @@
   .postButtons{
     text-align: center !important;
   }
-  /* .postButtons {
+  .postButtons {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     gap: 8px;
-  } */
-  
-  /* .getButton {
-    padding: 8px;
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  } */
-  
-  .deleteButton {
+  }
+  .deleteButton,
+  .editButton  {
     padding: 5px;
     color: white;
     border: none;
@@ -67,7 +60,8 @@
     cursor: pointer;
     font-size: 16px;
   }
-  .deleteButton img{
+  .deleteButton img,
+  .editButton img{
     width: 20px;
     height: 20px;
   }

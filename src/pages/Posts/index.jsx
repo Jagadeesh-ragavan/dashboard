@@ -25,14 +25,19 @@ const Posts = ({ userId }) => {
 
   const handleDelete = async (postId) => {
     try {
-      await deletePost(postId);
-      const updatedPosts = userPosts.filter((post) => post.id !== postId);
-      alert('Post Deleted Successfully')
-      setUserPosts(updatedPosts);
+      const isConfirmed = window.confirm('Are you sure you want to delete this post?');
+
+      if (isConfirmed) {
+        await deletePost(postId);
+        const updatedPosts = userPosts.filter((post) => post.id !== postId);
+        alert('Post Deleted Successfully');
+        setUserPosts(updatedPosts);
+      } 
     } catch (error) {
       console.error('Error deleting post:', error);
     }
   };
+
 
   return (
     <div className={styles.postInfo}>
@@ -45,17 +50,20 @@ const Posts = ({ userId }) => {
             <tr>
               <th>S.No</th>
               <th>Title</th>
-              <th></th>
+              <th>Action</th>
             </tr>
           </thead>
           <tbody>
             {userPosts.map((post,index) => (
               <tr key={post.id}>
                 <td>{index + 1}</td>
-                <td>
-                  <Link to={`/posts/${post.id}`}>{post.title}</Link>
-                </td>
+                <td>{post.title}</td>
                 <td className={styles.postButtons}>
+                  <Link to={`/posts/${post.id}`}>
+                    <button className={styles.editButton}>
+                      <img src='/images/view.svg' alt="view" />
+                    </button>
+                  </Link>
                   <button
                     className={styles.deleteButton}
                     onClick={() => handleDelete(post.id)}
