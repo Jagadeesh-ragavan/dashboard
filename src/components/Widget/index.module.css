@@ -81,12 +81,12 @@
       height: 300px;
     }
     .dashboardWidgets ul {
-      flex-direction: column; 
+      flex-wrap: wrap;
       align-items: center; 
     }
   
     .dashboardWidgets li {
-      width: 30%;
+      width: 40%;
       margin: 10px; 
     }
   }
@@ -104,6 +104,10 @@
     .pieChart{
       width: 200px;
       height: 200px;
+    }
+    .dashboardWidgets ul {
+      flex-direction: column;
+      align-items: center; 
     }
     .dashboardWidgets li {
       width: 50%;
